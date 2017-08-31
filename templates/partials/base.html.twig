@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="{{ grav.language.getLanguage ?: 'en' }}"> <![endif]-->
+<html class="no-js" lang="{{ grav.language.getLanguage ?: 'en' }}">
+<head>
+    {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+        {% block head %}
+            <meta charset="utf-8" />
+            <title>{% if header.title %}{{ header.title }}{% endif %}</title>
+            {% include 'partials/metadata.html.twig' %}
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
+
+            <script type='text/javascript' src='{{ url('theme://js/vendor/modernizr.js') }}'></script>
+
+            {% block stylesheets %}
+                {% do assets.addCss('theme://css/normalize.css') %}
+                {% do assets.addCss('theme://css/foundation.css') %}
+                {% do assets.addCss('theme://icons/foundation-icons.css') %}
+                {% do assets.addCss('theme://css/animate.css') %}
+                {% do assets.addCss('theme://css/pizza.css') %}
+                {% do assets.addCss('theme://css/app.css') %}
+            {% endblock %}
+            {{ assets.css() }}
+
+            <link href="{{ url('theme://css/print.css') }}" rel="stylesheet" type="text/css" media="print" />
+
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block header %}
+            {% include 'partials/header.html.twig' %}
+        {% endblock %}
+        {% block body %}
+            <div class="row main">
+                {% block content %}
+                {% endblock %}
+            </div>
+        {% endblock %}
+
+         {% block footer %}
+            {% include 'partials/footer.html.twig' %}
+        {% endblock %}
+
+        {% block javascripts %}
+            {% do assets.add('jquery',101) %}
+            {% do assets.addJs('theme://js/foundation.min.js') %}
+            {% do assets.addJs('theme://js/vendor/snap.svg.js') %}
+            {% do assets.addJs('theme://js/pizza.js') %}
+        {% endblock %}
+        {{ assets.js() }}
+
+        <script type="text/javascript">
+        Pizza.init(document.body, {
+            donut: true,
+            donut_inner_ratio: 0.7,
+        });
+        </script>
+
+    </body>
+    </html>

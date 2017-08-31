@@ -1,0 +1,13 @@
+name: Zresume
+version: 1.0.0
+description: "Zresume is a Grav adaptation of Fernando Báez resume PSD theme."
+icon: group
+author:
+  name: ZuoLan
+  email: i@zuolan.me
+  url: https://zuolan.me
+homepage: https://github.com/izuolan/zresume
+demo: https://zuolan.me/resume
+keywords: resume, resume, theme, modern
+bugs: https://github.com/izuolan/zresume/issues
+license: MIT

@@ -1,0 +1,11 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+  <section class="error-404 not-found">
+    <header class="page-header">
+      <h1>Error {{ page.header.http_response_code }}</h1>
+    </header>
+    <div class="page-content">
+      {{ page.content }}
+    </div>
+  </section>
+{% endblock %}

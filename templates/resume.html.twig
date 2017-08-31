@@ -1,0 +1,35 @@
+{%spaceless%}
+{% embed 'partials/base.html.twig' %}
+
+  {% set collection = page.collection() %}
+  {% set base_url = page.url %}
+  {% set feed_url = base_url %}
+
+  {% if base_url == '/' %}
+    {% set base_url = '' %}
+  {% endif %}
+
+  {% if base_url == base_url_relative %}
+    {% set feed_url = base_url~'/'~page.slug %}
+  {% endif  %}
+
+  {% block content %}
+    <div class="large-6 columns">
+      {% for module in page.collection({'items':{'@taxonomy.category': 'left'},'order': {'by': 'date', 'dir': 'desc'}}) %}
+        {% if module.template %}
+          {% include 'layouts/' ~ module.template ~ '.html.twig' %}
+        {% endif %}
+      {% endfor %}
+    </div> 
+
+    <div class="large-6 columns">
+      {% for module in page.collection({'items':{'@taxonomy.category': 'right'},'order': {'by': 'date', 'dir': 'desc'}}) %}
+        {% if module.template %}
+          {% include 'layouts/' ~ module.template ~ '.html.twig' %}
+        {% endif %}
+      {% endfor %}
+     </div>
+  {% endblock %}
+
+{% endembed %}
+{%endspaceless%}

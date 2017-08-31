@@ -1,0 +1,340 @@
+/* Body */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin-top: 3rem;
+}
+
+.main {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+h4 {
+    font-weight: 400;
+    border-bottom: 2px dotted;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* Row */
+
+.row {
+    max-width: 75rem;
+}
+
+
+/* Border */
+
+.border-left {
+    border-left: 1px solid;
+}
+
+.border-left ul {
+    margin-bottom: 0;
+}
+
+
+/* Header */
+
+#header {
+    padding-top: 3rem;
+}
+
+#header h2 {
+    margin-top: -1.15rem;
+}
+
+.website {
+    font-weight: 400;
+}
+
+.website i {
+    color: #BDBEC0;
+    font-size: 1.3rem;
+}
+
+.website a {
+    color: #BDBEC0;
+    font-size: 1.25rem;
+}
+
+
+/* Global formatiing */
+
+.light,
+p,
+.name {
+    color: #58585A;
+}
+
+.light2 {
+    color: #BDBEC0;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.title {
+    color: #232323;
+}
+
+.title i {
+    font-style: normal;
+}
+
+p {
+    font-weight: 300;
+}
+
+.community ol,
+.community ol p {
+    font-size: 0.75rem;
+    margin-top: -0.5rem;
+}
+
+
+/* All Skills */
+
+.skill .small-block-grid-2 li {
+    padding-bottom: 0;
+}
+
+.skill h6 {
+    font-style: normal;
+}
+
+.ellipses li span {
+    margin-left: -1.5rem;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.3rem;
+    background: #58585A !important;
+    border-radius: 100%;
+    display: block;
+    margin-top: 0.2rem;
+}
+
+.ellipses li span.grey {
+    background: #D1D2D4 !important;
+}
+
+
+/* Specialities Skills */
+
+path[data-id="s1"] {
+    fill: #D1D2D4;
+    stroke: #fff;
+    stroke-width: 10;
+}
+
+path[data-id="s0"] {
+    fill: #58585A;
+    stroke-width: 10;
+    stroke: #fff;
+}
+
+.nostroke path[data-id="s0"] {
+    stroke-width: 0;
+}
+
+.pie_desc {
+    position: absolute;
+    top: 5.5rem;
+    left: 1.6rem;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.pie {
+    width: 12.8rem;
+    height: 12.8rem;
+    margin-left: -2.5rem;
+}
+
+.skill_info {
+    text-align: center;
+    width: 7.4rem;
+}
+
+.skill_name {
+    color: #232323;
+    display: block;
+}
+
+.skill_level {
+    color: #888888;
+    font-size: 80%;
+    display: block;
+}
+
+.specialities .columns+.columns:last-child {
+    float: left;
+}
+
+
+/* Project */
+
+.pro_surround {
+    position: relative;
+    margin-top: 2em;
+}
+
+.pro {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-left: 3px solid;
+    padding-left: 2rem;
+}
+
+.pro_item {
+    padding-bottom: 1rem;
+}
+
+.pro_item:before {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background: #222;
+    content: "";
+    position: absolute;
+    left: -0.4rem;
+    margin-top: 2rem;
+}
+
+.pro .pro_name,
+.pro .category {
+    color: #6D6E71;
+}
+
+
+/* Experience */
+
+.experience {
+    position: relative;
+}
+
+.experience .year {
+    font-size: 10rem;
+    font-weight: 400;
+    color: #58585A;
+}
+
+.exp_data {
+    margin-top: 7.2rem;
+    white-space: nowrap;
+}
+
+.date,
+.role,
+.company {
+    color: #888888;
+}
+
+.year {
+    float: left;
+    padding-right: 1rem;
+}
+
+
+/* Recognitions */
+
+img.ribbon {
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    width: 100px !important;
+    height: 131px !important;
+    max-width: 100px;
+}
+
+.recognitions .category {
+    top: 3.5rem;
+    margin-left: -0.8rem;
+    position: relative;
+    font-size: 0.8rem;
+    width: 130px;
+    text-align: center;
+}
+
+.recog_data {
+    padding-top: 3rem;
+}
+
+.desc {
+    color: #6D6E71;
+}
+
+.place {
+    color: #58585A;
+}
+
+
+/* Interests */
+
+.interests {
+    padding-top: 2em;
+}
+
+.int_icon {
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid #C1C2C4;
+    border-radius: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.activity {
+    text-align: center;
+    color: #58585A;
+}
+
+.int_icon i {
+    font-style: normal;
+    padding-top: 1.8rem;
+    display: block;
+    text-align: center;
+}
+
+.int_icon i:before {
+    font-size: 3rem;
+    color: #58585A;
+}
+
+
+/* Footer */
+
+.footer .border {
+    width: 2rem;
+    height: 1px;
+    margin: 0 auto;
+    background: #BDBEC0;
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #888888;
+    text-decoration: underline;
+}

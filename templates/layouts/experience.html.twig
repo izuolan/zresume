@@ -1,0 +1,16 @@
+<div class="avoid_pagebreak animated fadeInUp">
+  <h4 class="title"><i class="fi-{{ module.header.icon }}"></i> {{ module.header.title }}</h4>
+  <div class="row experience">
+    {% for item in module.header.experience %}
+    <div class="large-6 medium-6 small-12 columns {% if loop.last %}end{% endif %} {% if item.animation %}animated {{ item.animation }}{% endif %}">
+      <div class="year">{{ item.years }}</div>
+      <div class="exp_data">
+        <div class="date">{{ item.date }}</div>
+        <div class="role">{{ item.role }}</div>
+        <div class="company">{{ item.company }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {{ module.content }}
+</div>

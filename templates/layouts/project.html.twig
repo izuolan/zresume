@@ -1,0 +1,23 @@
+<div class="avoid_pagebreak animated fadeInUp">
+  <h4 class="title"><i class="fi-{{ module.header.icon }}"></i> {{ module.header.title }}</h4>
+  {% if module.header.project %}
+  <div class="pro_surround">
+    <div class="pro animated">
+      {% for item in module.header.project %}
+        <div class="pro_item">
+          <div class="category">{{ item.category }}</div>
+          <div class="pro_name">{{ item.pro_name }}</div>
+          <div class="pro_desc">
+            <ul>
+              {% for item in item.pro_desc %}
+                <li class="desc_line">{{ item.line }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  {{ module.content }}
+</div>

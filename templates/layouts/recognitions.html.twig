@@ -1,0 +1,23 @@
+<div class="avoid_pagebreak animated fadeInUp">
+  <h4 class="title"><i class="fi-{{ module.header.icon }}"></i> {{ module.header.title }}</h4>
+  <div class="row recognitions">
+    {% for item in module.header.recognitions %}
+    <div class="large-12 small-12 columns {% if loop.last %}end{% endif %} {% if item.animation %}animated {{ item.animation }}{% endif %}">
+      <div class="row">
+        <div class="large-3 medium-3 small-4 columns">
+          <div class="category">{{ item.category }}</div>
+          <img src="{{ url('theme://img/ribbon.svg') }}" width="100" height="131" alt="{{ item.title }}" class="ribbon">
+        </div>
+        <div class="large-9 medium-9 small-8 columns">
+          <div class="recog_data">
+            <div class="title">{{ item.title }}</div>
+            <div class="place">{{ item.place }}</div>
+            <div class="desc">{{ item.desc }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {{ module.content }}
+</div>
