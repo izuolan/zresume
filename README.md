@@ -1,6 +1,6 @@
 # Zresume 简历主题
 
-[![Docker Stars](https://img.shields.io/docker/stars/zuolan/resume.svg)](https://github.com/izuolan/zresume)  [![Docker Pulls](https://img.shields.io/docker/pulls/zuolan/resume.svg)](https://github.com/izuolan/zresume)  [![Docker Automated buil](https://img.shields.io/docker/automated/zuolan/resume.svg)](https://github.com/izuolan/zresume)  [![Docker Build Statu](https://img.shields.io/docker/build/zuolan/resume.svg)](https://github.com/izuolan/zresume)
+[![Docker Stars](https://img.shields.io/docker/stars/zuolan/resume.svg)](https://hub.docker.com/r/zuolan/resume/)  [![Docker Pulls](https://img.shields.io/docker/pulls/zuolan/resume.svg)](https://hub.docker.com/r/zuolan/resume/)  [![Docker Automated buil](https://img.shields.io/docker/automated/zuolan/resume.svg)](https://hub.docker.com/r/zuolan/resume/)  [![Docker Build Statu](https://img.shields.io/docker/build/zuolan/resume.svg)](https://hub.docker.com/r/zuolan/resume/)
 
 
 这是一个 [Grav CMS](http://getgrav.org/) 的程序员简历主题。
