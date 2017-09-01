@@ -16,7 +16,7 @@ project:
     pro_desc: 
     - line: 用于查询校内网的信息，例如成绩、课程、考勤等；
     - line: 基于树莓派集群实现，实现RESTful风格的API；
-    - line: 支持移动端、小程序（本质是课程设计）。
+    - line: 支持移动端、小程序（移动开发的课程设计）。
 
   - category: 规模存储经验
     pro_name: 某跨境广告公司内部网盘

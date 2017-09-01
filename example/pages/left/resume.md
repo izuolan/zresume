@@ -4,7 +4,7 @@ name: 黄靖钧
 description: DevOps & 容器云
 
 pdf_url: "https://cdn.zuolan.me/resume.pdf"
-blog_url: "htt//www.jianshu.com/u/e213f00c7c35"
+blog_url: "http://www.jianshu.com/u/e213f00c7c35"
 
 address:
     - line: "出生于1995年2月"
