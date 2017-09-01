@@ -1,6 +1,6 @@
 # Zresume 简历主题
 
-[![Docker Stars](https://img.shields.io/docker/stars/zuolan/resume.svg)](https://github.com/izuolan/zresume)  [![Docker Pulls](https://img.shields.io/docker/pulls/zuolan/resume.svg)](https://github.com/izuolan/zresume)  [![Docker Automated buil](https://img.shields.io/docker/automated/zuolan/resume.svg)](https://github.com/izuolan/zresume)  [![Docker Build Statu](https://img.shields.io/docker/build/zuolan/resume.svg)](https://github.com/izuolan/zresume)  [![ImageLayers Size](https://img.shields.io/imagelayers/image-size/zuolan/resume/latest.svg)](https://github.com/izuolan/zresume)  [![ImageLayers Layers](https://img.shields.io/imagelayers/layers/zuolan/resume/latest.svg)](https://github.com/izuolan/zresume)
+[![Docker Stars](https://img.shields.io/docker/stars/zuolan/resume.svg)](https://github.com/izuolan/zresume)  [![Docker Pulls](https://img.shields.io/docker/pulls/zuolan/resume.svg)](https://github.com/izuolan/zresume)  [![Docker Automated buil](https://img.shields.io/docker/automated/zuolan/resume.svg)](https://github.com/izuolan/zresume)  [![Docker Build Statu](https://img.shields.io/docker/build/zuolan/resume.svg)](https://github.com/izuolan/zresume)
 
 
 这是一个 [Grav CMS](http://getgrav.org/) 的程序员简历主题。
@@ -54,11 +54,7 @@ $ docker run -d --name resume \
 ### 快速获取 Github 日历
 
 ```
-$ GITHUB_USER="izuolan"
-$ curl https://github.com/$GITHUB_USER | \
-    awk '/<svg.+class=js-calendar-graph-svg/,/svg>/' | \
-    sed -e 's|<svg|<svg xmlns=http://www.w3.org/2000/svg|' | \
-    sed '/text/'d > github.svg
+curl https://github.com/izuolan | awk '/<svg.+class="js-calendar-graph-svg"/,/svg>/' | sed -e 's|<svg|<svg xmlns="http://www.w3.org/2000/svg"|' | sed '/text/'d > github.svg
 ```
 
 ## 修改主题
