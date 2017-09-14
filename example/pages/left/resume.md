@@ -3,7 +3,7 @@ title: 我的简历 | 黄靖钧
 name: 黄靖钧
 description: DevOps & 容器云
 
-pdf_url: "https://cdn.zuolan.me/resume.pdf"
+pdf_url: "https://cdn.zuolan.me/resume.png"
 blog_url: "http://www.jianshu.com/u/e213f00c7c35"
 
 address:

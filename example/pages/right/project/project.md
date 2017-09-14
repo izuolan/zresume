@@ -8,7 +8,7 @@ project:
     pro_name: 分布式私有Registry
     pro_desc: 
     - line: 基于Harbor二次开发，实现后端存储高可用；
-    - line: 实现内外网数据同步存储（仅数据库）；
+    - line: 集成Gogs（内外网双向同步）与Jenkins实现持续部署；
     - line: 实现mirror功能，可以从Docker Hub拉取镜像到私有仓库，同时不影响镜像推送。
 
   - category: 容器云开发经验

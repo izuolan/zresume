@@ -7,7 +7,7 @@ taxonomy:
 ---
 
 Github：
-[![img/github.svg](https://resume.zuolan.me/user/themes/zresume/img/github.svg)](https://github.com/izuolan)
+[![img/github.svg](https://cdn.zuolan.me/github.svg)](https://github.com/izuolan)
 
 ----
 

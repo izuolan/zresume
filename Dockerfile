@@ -1,6 +1,7 @@
 FROM alpine
 
-ENV GRAV_VERSION="1.3.2"
+ENV GRAV_VERSION="1.3.2" \
+    OUTPUT_PATH="/usr/html/static"
 
 RUN apk update && \
     # Install build dependencies 
@@ -43,7 +44,7 @@ WORKDIR /usr/html/user/themes/zresume/
     # Install Zresume
 RUN mv files/nginx.conf /etc/nginx/ && \
     mv files/php-fpm.conf /etc/php7/ && \
-    mv files/run.sh / && \
+    mv files/*.sh / && \
     rm -rf files && \
     # Init example data
     rm -rf /usr/html/user/config /usr/html/user/pages && \
@@ -57,6 +58,6 @@ RUN mv files/nginx.conf /etc/nginx/ && \
     sed -i "s/nginx:x:100:101:nginx:\/var\/lib\/nginx:\/sbin\/nologin/nginx:x:100:101:nginx:\/usr:\/bin\/bash/g" /etc/passwd- && \
     ln -s /sbin/php-fpm7 /sbin/php-fpm
 
-VOLUME ["/usr/html/user/pages", "/usr/html/user/config"]
+VOLUME ["/usr/html/user/pages", "/usr/html/user/config", "/usr/html/static"]
 EXPOSE 80
 CMD ["/run.sh"]
