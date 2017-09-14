@@ -3,6 +3,7 @@ OUTPUT_PATH="/usr/html/static"
 
 apk update
 apk add wget
+mkdir -p $OUTPUT_PATH && cd $OUTPUT_PATH
 wget http://127.0.0.1:80
 
 cp -r /usr/html/user/themes/zresume/css $OUTPUT_PATH/css
