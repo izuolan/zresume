@@ -1,6 +1,7 @@
 #!/bin/sh
 RESUME_PATH="$HOME/resume"
-RESUME_PORT="8080"
+RESUME_PORT="$1"
+echo ${RESUME_PORT:="8080"}
 
 command -v docker >/dev/null 2>&1
 if [ $? != 0 ]; then curl -sSL https://get.docker.com/ | sh; fi

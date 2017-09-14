@@ -21,6 +21,8 @@
 
 ```shell
 curl -sSL https://git.io/Resume | bash
+# 指定端口，如果你的 8080 端口已经使用，可以指定其他端口，例如指定 2333 端口：
+curl -sSL https://git.io/Resume | bash 2333
 ```
 
 > 脚本会安装 Docker（如果没有安装的话），然后下载一个 30MB 左右的 Docker 镜像，启动时会占用 8080 端口，数据卷挂载到 `$HOME/resume` 目录。
@@ -36,33 +38,6 @@ docker exec -it resume generate
 ```
 
 静态页面会保存到`$HOME/resume/static`文件夹，然后你可以上传到一些静态页面托管服务上。简历更新只需要启动 resume 容器，然后重新执行导出命令即可。
-
-### 手动启动
-
-首先确保你安装了 Docker，然后执行下面命令：
-
-```shell
-# 使用下面脚本快速安装 Docker：
-# curl -sSL https://get.docker.com/ | sh
-
-$ RESUME_PATH="$HOME/resume" # 设置简历存储在本地的目录
-$ RESUME_PORT="8080"         # 设置访问简历的端口
-$ mkdir -p $RESUME_PATH
-
-# 获取示例文件
-$ docker run -d --name resume_tmp zuolan/resume
-$ docker cp resume_tmp:/usr/html/user/config $RESUME_PATH/config
-$ docker cp resume_tmp:/usr/html/user/pages $RESUME_PATH/pages
-$ docker rm -f resume_tmp resume
-
-# 启动简历容器
-$ docker run -d --name resume \
-    -p 8080:80 \
-    --restart=always \
-    -v /resume/pages:/usr/html/user/pages \
-    -v /resume/config/:/usr/html/user/config \
-    zuolan/resume
-```
 
 ### 快速获取 Github 日历
 
