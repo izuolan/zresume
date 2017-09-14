@@ -11,5 +11,5 @@ php-fpm7
 # start nginx
 mkdir -p /usr/logs/nginx
 mkdir -p /tmp/nginx
-chown www-data /tmp/nginx
+chown nginx /tmp/nginx
 nginx
