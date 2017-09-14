@@ -32,7 +32,7 @@ curl -sSL https://git.io/Resume | bash
 导出静态页面之前，你需要执行上面“快速启动”的步骤。
 
 ```shell
-docker exec -it resume /generate.sh
+docker exec -it resume generate
 ```
 
 静态页面会保存到`$HOME/resume/static`文件夹，然后你可以上传到一些静态页面托管服务上。简历更新只需要启动 resume 容器，然后重新执行导出命令即可。
@@ -99,6 +99,10 @@ $ docker run -d --name resume \
   zuolan/resume
 ```
 
-## 协议
+## 相关
 
-主题最初从 [Resume](https://github.com/getgrav/grav-theme-resume) 主题 Fork 过来，原主题很久没更新了，依旧是MIT协议开源。
+主题最初从 [Resume](https://github.com/getgrav/grav-theme-resume) 主题 Fork 过来，原主题很久没更新了;
+
+有大佬用 Swift 实现了一个：[EFResume](https://github.com/EyreFree/EFResume);
+
+MIT协议开源。

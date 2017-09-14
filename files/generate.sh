@@ -17,3 +17,5 @@ cp -r /usr/html/user/themes/zresume/img $OUTPUT_PATH/img
 sed -i 's|/user/themes/zresume/||g' index.html
 sed -i "s|/user/plugins/markdown-notices/assets/|css/|g" index.html
 sed -i "s|/system/assets/jquery/|js/|g" index.html
+
+echo "Done."

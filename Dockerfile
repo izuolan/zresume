@@ -43,7 +43,9 @@ WORKDIR /usr/html/user/themes/zresume/
     # Install Zresume
 RUN mv files/nginx.conf /etc/nginx/ && \
     mv files/php-fpm.conf /etc/php7/ && \
-    mv files/*.sh / && \
+    chmod a+x files/*.sh && \
+    mv files/run.sh /usr/bin/run && \
+    mv files/generate.sh /usr/bin/generate && \
     rm -rf files && \
     # Init example data
     rm -rf /usr/html/user/config /usr/html/user/pages && \
@@ -59,4 +61,4 @@ RUN mv files/nginx.conf /etc/nginx/ && \
 
 VOLUME ["/usr/html/user/pages", "/usr/html/user/config", "/usr/html/static"]
 EXPOSE 80
-CMD ["/run.sh"]
+CMD ["run"]
