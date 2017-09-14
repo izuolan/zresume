@@ -22,10 +22,10 @@
 ```shell
 curl -sSL https://git.io/Resume | bash
 # 指定端口，如果你的 8080 端口已经使用，可以指定其他端口，例如指定 2333 端口：
-curl -sSL https://git.io/Resume | bash 2333
+curl -sSL https://git.io/Resume | bash -s 2333
 ```
 
-> 脚本会安装 Docker（如果没有安装的话），然后下载一个 30MB 左右的 Docker 镜像，启动时会占用 8080 端口，数据卷挂载到 `$HOME/resume` 目录。
+> 脚本会安装 Docker（如果没有安装的话），然后下载一个 30MB 左右的 Docker 镜像，启动时默认会占用 8080 端口（当然你可以修改），数据卷挂载到 `$HOME/resume` 目录。
 
 在 `$HOME/resume` 目录中有两个文件夹，分别是 config 和 pages，前者是配置文件，后者是简历的 Markdown 源文件。
 
