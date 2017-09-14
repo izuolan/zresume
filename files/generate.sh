@@ -1,4 +1,5 @@
 #!/bin/sh
+OUTPUT_PATH="/usr/html/static"
 
 apk update
 apk add wget

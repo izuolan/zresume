@@ -17,5 +17,6 @@ docker rm -f resume_tmp resume >/dev/null 2>&1
 docker run -d --name resume -p $RESUME_PORT:80 \
     -v $RESUME_PATH/pages:/usr/html/user/pages \
     -v $RESUME_PATH/config/:/usr/html/user/config/ \
+    -v $RESUME_PATH/static/:/usr/html/static \
     --restart=always zuolan/resume
 echo "Done"

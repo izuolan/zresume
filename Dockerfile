@@ -1,7 +1,6 @@
 FROM alpine
 
-ENV GRAV_VERSION="1.3.2" \
-    OUTPUT_PATH="/usr/html/static"
+ENV GRAV_VERSION="1.3.2"
 
 RUN apk update && \
     # Install build dependencies 
