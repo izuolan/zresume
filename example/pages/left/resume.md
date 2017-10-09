@@ -1,9 +1,9 @@
 ---
-title: 我的简历 | 黄靖钧
-name: 黄靖钧
-description: DevOps & 容器云
+title: 我的简历 | 左蓝
+name: 左蓝
+description: 星际生态学 & 星际通信
 
-pdf_url: "https://cdn.zuolan.me/resume.png"
+pdf_url: ""
 blog_url: "http://www.jianshu.com/u/e213f00c7c35"
 
 address:
@@ -11,7 +11,7 @@ address:
     - line: "性别：男"
 contact: 
     - line: "邮箱：i@zuolan.me"
-    - line: "手机：18814129725"
+    - line: "手机：1234567890"
 social:
     - line: "微信：@zuo-lan"
     - line: "QQ：792236072"

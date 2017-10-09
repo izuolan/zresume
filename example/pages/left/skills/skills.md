@@ -7,40 +7,36 @@ column1_name: 编程技能
 column1_animation: fadeIn
 
 column1:
-  - name: Linux
+  - name: 星际飞行
     level: 8
-  - name: Shell
+  - name: 星际生态学
     level: 8
-  - name: Go
+  - name: 星际通信
     level: 7
-  - name: Python
+  - name: 曲率原理
     level: 5
-  - name: Java/Android
+  - name: 天体物理学
     level: 7
-  - name: "HTML & CSS"
+  - name: 生物材料学
     level: 8
-  - name: "Javascript"
+  - name: 星舰结构学
     level: 4
-  - name: Docker
+  - name: 汉语
     level: 8
-  - name: Kubernetes
+  - name: 时空原理
     level: 7
-  - name: C/C++/Qt
-    level: 2
-  - name: PHP
-    level: 4
 
 column2_name: 能力简述
 column2_animation: fadeIn
 
 column2:
-  - name: 良好的编码规范。
-  - name: 熟悉Linux工作机制。
-  - name: 善于编写脚本解决问题。
-  - name: 喜欢DevOps工作流程。
-  - name: 熟练使用Git协作开发。
-  - name: 热衷容器与集群技术。
-  - name: 关注容器云生态环境。
+  - name: 良好的操作规范。
+  - name: 熟悉舰船工作机制。
+  - name: 善于维护星际生态平衡。
+  - name: 喜欢星际文化交流。
+  - name: 熟练使用曲率跃迁飞行。
+  - name: 热衷星际通信与星舰调度。
+  - name: 关注泛星际生态环境。
     
 taxonomy:
     category: left

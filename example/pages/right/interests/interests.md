@@ -8,13 +8,13 @@ interests:
       activity: 写作
       animation: bounceIn
     - icon: html5
-      activity: 前端
+      activity: 并发传输
       animation: bounceIn
     - icon: shield
-      activity: 安全
+      activity: 通信安全
       animation: bounceIn
     - icon: paint-bucket
-      activity: 设计
+      activity: 材料设计
       animation: bounceIn
 
 taxonomy:

@@ -1,0 +1,37 @@
+enabled: true
+
+routes:
+  login: "/guest"
+  logout: "/leave"
+
+# MUST BE AN ALPHANUMERIC CHAR
+# Generator : http://www.sethcardoza.com/tools/random-password-generator/
+session_ss: random_value
+
+
+private_site: true
+private_tag: hidden
+enable_username: false
+
+users:
+  no_user : 5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8 # By default, is password
+
+texts:
+  h1 : 我的简历
+  h2 : <h4>如果您不知道密码可以联系 <strong>i@zuolan.me</strong> 获取。</h4>
+fields:
+  username:
+    label: "访客名称"
+    placeholder: "输入您的访客名称"
+  password:
+    label: "密码"
+    placeholder: "请输入您的访问密码"
+  antispam:
+    label: "反垃圾邮件"
+    placeholder: "反垃圾邮件专用，请不要在此填写"
+  login:
+    label: "解锁"
+messages:
+  success: "验证成功。"
+  error: "密码错误次数过多，请确保您有访问权限。"
+  fail: "访问密码错误，请重新输入。"

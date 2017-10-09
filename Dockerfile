@@ -1,6 +1,6 @@
 FROM alpine
 
-ENV GRAV_VERSION="1.3.2"
+ENV GRAV_VERSION="1.3.4" PASSWORD="password"
 
 RUN apk update && \
     # Install build dependencies 
@@ -30,9 +30,13 @@ RUN apk update && \
     php7-dom && \
     # Download Grav
     mkdir -p /usr/html && \
-    curl -fLk -o /tmp/grav.zip  "https://github.com/getgrav/grav/releases/download/$GRAV_VERSION/grav-v$GRAV_VERSION.zip" && \
+    curl -fLk -o /tmp/grav.zip "https://github.com/getgrav/grav/releases/download/$GRAV_VERSION/grav-v$GRAV_VERSION.zip" && \
     unzip /tmp/grav.zip -d /tmp && \
     mv /tmp/grav/* /usr/html/ && \
+    # Install Private plugin
+    curl -fLk -o /tmp/private.zip "https://github.com/Diyzzuf/grav-plugin-private/archive/master.zip" && \
+    unzip /tmp/private.zip -d /tmp && \
+    mv /tmp/grav-plugin-private-master/ /usr/html/user/plugins/private && \
     # Clean cache
     apk del build && \
     rm -rf /var/cache/apk/* /tmp/* /usr/html/user/themes/antimatter
@@ -46,6 +50,11 @@ RUN mv files/nginx.conf /etc/nginx/ && \
     chmod a+x files/*.sh && \
     mv files/run.sh /usr/bin/run && \
     mv files/generate.sh /usr/bin/generate && \
+    # Init Private plugin data
+    mkdir -p /usr/html/user/config/plugins && \
+    mv files/private.yaml /usr/html/user/config/plugins/ && \
+    # Clean files
+    chmod 755 -R /usr/html/cache/ && \
     rm -rf files && \
     # Init example data
     rm -rf /usr/html/user/config /usr/html/user/pages && \

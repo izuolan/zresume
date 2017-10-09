@@ -8,6 +8,7 @@
 ## 特色
 
 * 轻量，无需数据库。
+* 支持密码验证访问，避免完全公开简历。
 * 直接使用 Markdown 编写简历，实时解析页面。
 * 简历所有图标、文字、排版均在 Markdown 中设置，无需修改代码。
 * 支持 Docker 一键部署，镜像体积约 30MB。
@@ -29,7 +30,7 @@ curl -sSL https://git.io/Resume | bash -s 2333
 
 在 `$HOME/resume` 目录中有两个文件夹，分别是 config 和 pages，前者是配置文件，后者是简历的 Markdown 源文件。
 
-### 导出静态页面 
+### 导出静态页面
 
 导出静态页面之前，你需要执行上面“快速启动”的步骤。
 
@@ -38,6 +39,23 @@ docker exec -it resume generate
 ```
 
 静态页面会保存到`$HOME/resume/static`文件夹，然后你可以上传到一些静态页面托管服务上。简历更新只需要启动 resume 容器，然后重新执行导出命令即可。
+
+### 密码访问
+
+直接手动启动：
+
+```shell
+docker run -d --name resume \
+  -e PASSWORD=5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8 \ # 此为"password"的sha_1混淆
+  -p 6666:80 \
+  --restart=always \
+  -v ~/Resume/themes:/usr/html/user/themes \
+  -v ~/Resume/pages:/usr/html/user/pages \
+  -v ~/Resume/config:/usr/html/user/config \
+  zuolan/resume
+```
+
+在线密码生成器：http://www.sha1-online.com ，在这个网站生成一个密码混淆，填写到启动命令中。
 
 ### 快速获取 Github 日历
 

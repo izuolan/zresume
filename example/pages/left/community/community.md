@@ -6,16 +6,15 @@ taxonomy:
     category: left
 ---
 
-Github：
+星际航行日程（雾）：
 [![img/github.svg](https://cdn.zuolan.me/github.svg)](https://github.com/izuolan)
 
 ----
 
 | 领域    | 日常社区活动                                   |
 | ----- | ---------------------------------------- |
-| Linux | 日常维护一些AUR上的软件包更新；积极参与Linux社区内测，活跃于社区Stack、Gitter甚至IRC频道。 |
-| 容器    | 积极向容器生态项目提交代码、反馈问题；日常更新各类社区Docker镜像；维护一批Web应用与基础镜像的Dockerfile[^1]；保持关注容器安全问题，及时反馈[^2]社区。 |
-| 其他    | 通过Transifex与Weblate参与开源软件的汉化；翻译部分Go语言教程；补充、维护社区文档。 |
+| 星际通信 | 长期维护银-仙（银河系-仙女系）量子通信干道。 |
+| 星际生态 | 在该领域发表大量星际生态学研究论文[^1]。 |
+| 飞行经验 | 研究过2233颗星球，233个星系，总飞行经验长达6666小时（60进制）。 |
 
-[^1]: 私人创建部分：[dockerfiles](https://github.com/izuolan/dockerfiles)
-[^2]: 早期Docker的chroot提权、Swarm的Socket连接等突出的安全问题都有向社区反馈（非PR）。
+[^1]: 优化脚注显示效果：[这不是论文](https://github.com/izuolan/dockerfiles)
