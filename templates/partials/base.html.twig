@@ -28,17 +28,17 @@
     </head>
 
     <body>
-        {% block header %}
-            {% include 'partials/header.html.twig' %}
-        {% endblock %}
         {% block body %}
+            {% block header %}
+                {% include 'partials/header.html.twig' %}
+            {% endblock %}
             <div class="row main">
                 {% block content %}
                 {% endblock %}
             </div>
         {% endblock %}
 
-         {% block footer %}
+        {% block footer %}
             {% include 'partials/footer.html.twig' %}
         {% endblock %}
 

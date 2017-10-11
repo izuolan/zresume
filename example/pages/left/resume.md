@@ -5,7 +5,6 @@ description: 星际生态学 & 星际通信
 
 download_name: "下载"
 download_url: ""
-blog_url: "http://www.jianshu.com/u/e213f00c7c35"
 
 baseinfo_name: "基本信息"
 baseinfo:
