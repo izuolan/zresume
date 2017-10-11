@@ -10,7 +10,7 @@
         </div>
         <div class="large-3 columns">
             <div class="row">
-                <div class="small-4 columns light2">基本信息</div>
+                <div class="small-4 columns light2">{{ header.baseinfo_name }}</div>
                 <div class="small-8 columns border-left light2 ">
                     <ul class="no-bullet">
                         {% for item in header.address %}
@@ -22,7 +22,7 @@
         </div>
         <div class="large-3 columns">
             <div class="row">
-                <div class="small-4 columns light2">联系方式</div>
+                <div class="small-4 columns light2">{{ header.contact_name }}</div>
                 <div class="small-8 columns border-left light2">
                     <ul class="no-bullet">
                         {% for item in header.contact %}
@@ -34,7 +34,7 @@
         </div>
         <div class="large-3 columns">
             <div class="row">
-                <div class="small-4 columns light2">社交信息</div>
+                <div class="small-4 columns light2">{{ header.social_name }}</div>
                 <div class="small-8 columns border-left light2">
                     <ul class="no-bullet">
                         {% for item in header.social %}
@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="large-1 columns text-right website">
-            <a href="{{ header.pdf_url }}"><i class="fi-arrow-down"></i> 下载</a>
+            <a href="{{ header.download_url }}"><i class="fi-arrow-down"></i> {{ header.download_name }}</a>
         </div>
     </div>
 </div>
