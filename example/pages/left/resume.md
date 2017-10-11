@@ -3,7 +3,7 @@ title: 我的简历 | 左蓝
 name: 左蓝
 description: 星际生态学 & 星际通信
 
-download_name: "下载"
+download_name: "<i class=\"fi-arrow-down\"></i> 下载"
 download_url: ""
 
 baseinfo_name: "基本信息"
