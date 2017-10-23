@@ -2,8 +2,9 @@
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/zuolan/resume.svg)](https://hub.docker.com/r/zuolan/resume/)  [![Docker Automated buil](https://img.shields.io/docker/automated/zuolan/resume.svg)](https://hub.docker.com/r/zuolan/resume/)  [![Docker Build Statu](https://img.shields.io/docker/build/zuolan/resume.svg)](https://hub.docker.com/r/zuolan/resume/)
 
+这是一个 [Grav CMS](http://getgrav.[]/) 的程序员简历主题。
 
-这是一个 [Grav CMS](http://getgrav.org/) 的程序员简历主题。
+![screenshot](screenshot.jpg)
 
 ## 特色
 
