@@ -17,7 +17,7 @@
 
 ## 使用方法
 
-### 快速启动（推荐）
+### 快速启动（Demo）
 
 直接执行下面命令：
 
@@ -29,17 +29,30 @@ curl -sSL https://git.io/Resume | bash -s 2333
 
 > 脚本会安装 Docker（如果没有安装的话），然后下载一个 30MB 左右的 Docker 镜像，启动时默认会占用 8080 端口（当然你可以修改），数据卷挂载到 `$HOME/resume` 目录。
 
-在 `$HOME/resume` 目录中有两个文件夹，分别是 config 和 pages，前者是配置文件，后者是简历的 Markdown 源文件。
+在 `$HOME/resume` 目录中有三个文件夹，分别是 config、pages 和 static：
+
+- config 是站点配置文件夹；
+- pages 是简历的 Markdown 源文件；
+- static 是导出静态页面的目录。
+
+如果不喜欢只需要删除镜像（`docker rm -f resume && docker rmi zuolan/resume`）和`~/Resume`目录即可完全卸载。
 
 ### 导出静态页面
 
-导出静态页面之前，你需要执行上面“快速启动”的步骤。
+导出静态页面之前，你需要执行上面“快速启动”的步骤，这样才能在本地看到一份 Markdown 简历模板，然后修改这份。
 
 ```shell
-docker exec -it resume generate
+docker run --rm -it --name static_resume \
+    -v ~/Resume/themes:/usr/html/user/themes \
+    -v ~/Resume/pages:/usr/html/user/pages \
+    -v ~/Resume/config:/usr/html/user/config \
+    -v ~/Resume/static/:/usr/html/static \
+    zuolan/resume generate
 ```
 
-静态页面会保存到`$HOME/resume/static`文件夹，然后你可以上传到一些静态页面托管服务上。简历更新只需要启动 resume 容器，然后重新执行导出命令即可。
+静态页面会保存到`$HOME/Resume/static`文件夹，然后你可以上传到一些静态页面托管服务上。简历静态页面更新只需要再执行一次上面命令即可。
+
+> **静态导出插件和密码访问不能同时共存。**
 
 ### 密码访问
 
