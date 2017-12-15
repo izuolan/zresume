@@ -113,3 +113,7 @@ $ docker run -d --name resume \
 有大佬用 Swift 实现了一个：[EFResume](https://github.com/EyreFree/EFResume);
 
 MIT协议开源。
+
+## 提示
+
+`config`文件夹改动之后要重启容器才能生效，`pages`文件夹改动是即时生效的。
