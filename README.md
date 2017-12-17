@@ -42,12 +42,7 @@ curl -sSL https://git.io/Resume | bash -s 2333
 导出静态页面之前，你需要执行上面“快速启动”的步骤，这样才能在本地看到一份 Markdown 简历模板，然后修改这份。
 
 ```shell
-docker run --rm -it --name static_resume \
-    -v ~/Resume/themes:/usr/html/user/themes \
-    -v ~/Resume/pages:/usr/html/user/pages \
-    -v ~/Resume/config:/usr/html/user/config \
-    -v ~/Resume/static/:/usr/html/static \
-    zuolan/resume generate
+docker exec -it resume generate
 ```
 
 静态页面会保存到`$HOME/Resume/static`文件夹，然后你可以上传到一些静态页面托管服务上。简历静态页面更新只需要再执行一次上面命令即可。
